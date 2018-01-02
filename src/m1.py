@@ -84,13 +84,16 @@ class CircleChanger(object):
             :type colors: sequence of str
         """
         window = rg.RoseWindow(400, 400)
+        colors = []
         self.animation_factor = 1  # Smaller => faster animations
         self.seconds_to_sleep = 0.5  # Default for each call to draw
         center = rg.Point(x, y)
-        circ = rg.Circle(center, radius)
-        circ.fill_color = fill_color
-        circ.attach_to(window)
-        window.render(.3)
+        circle = rg.Circle(center, radius)
+        circle.fill_color = fill_color
+        colors = colors + circle
+        circle.attach_to(window)
+        window.render(3)
+        
         # --------------------------------------------------------------
         # Change the above "animation_factor" if the animations
         # go too fast or too slow for your tastes.  Setting it to N
