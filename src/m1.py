@@ -93,7 +93,6 @@ class CircleChanger(object):
         colors = colors + circle
         circle.attach_to(window)
         window.render(3)
-        
         # --------------------------------------------------------------
         # Change the above "animation_factor" if the animations
         # go too fast or too slow for your tastes.  Setting it to N
